@@ -52,4 +52,4 @@ $app = new Chicane\Application(
 |
 */
 
-//return $app;
+return $app;
