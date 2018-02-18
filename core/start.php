@@ -11,9 +11,9 @@
 |
 */
 
-// $app = new Illuminate\Foundation\Application(
-//     realpath(__DIR__.'/../')
-// );
+$app = new Chicane\Application(
+     realpath(__DIR__.'/../')
+);
 
 /*
 |--------------------------------------------------------------------------
@@ -52,4 +52,4 @@
 |
 */
 
-return $app;
+//return $app;
