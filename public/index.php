@@ -9,18 +9,14 @@
 
 /*
 |--------------------------------------------------------------------------
-| Register The Auto Loader
+| Register bootstrapper
 |--------------------------------------------------------------------------
 |
-| Composer provides a convenient, automatically generated class loader for
-| our application. We just need to utilize it! We'll simply require it
-| into the script here so that we don't have to worry about manual
-| loading any of our classes later on. It feels nice to relax.
 |
 */
 
-echo "hello";
-require_once __DIR__.'/../bootstrap/autoload.php';
+require_once __DIR__.'/../core/bootstrap.php';
+echo "bootstrapped";
 
 
 
@@ -35,3 +31,4 @@ require_once __DIR__.'/../bootstrap/autoload.php';
 */
 
 
+require_once __DIR__.'/../app/routes.php';
