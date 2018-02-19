@@ -10,11 +10,15 @@
 | the IoC container for the system binding all of the various parts.
 |
 */
+$error_notificator = new \Whoops\Run;
+$error_notificator->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$error_notificator->register();
 
 $app = new Chicane\Application(
      realpath(__DIR__.'/../')
 );
 
+$app->registerInstance($error_notificator);
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
