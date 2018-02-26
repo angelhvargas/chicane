@@ -14,6 +14,11 @@ $error_notificator = new \Whoops\Run;
 $error_notificator->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $error_notificator->register();
 
+$view_cache = new Twig_Loader_Filesystem(__DIR__.'/../storage/cache');
+$view_engine = new Twig_Environment($view_cache);
+$view_engine_options = [
+    'cache' => __DIR__.'/../storage/compiled/views' 
+];
 $app = new Chicane\Application(
      realpath(__DIR__.'/../')
 );
