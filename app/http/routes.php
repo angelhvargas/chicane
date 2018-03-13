@@ -7,6 +7,7 @@
  * Please check documentation
  *
  */
-
-
- echo "routes included";
+use Symfony\Component\Routing\Route;
+ $routes = [
+     'foo' => new Route('/foo', array('_controller' => 'MyController'))
+ ];

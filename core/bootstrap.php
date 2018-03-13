@@ -9,8 +9,8 @@ define('CHICANE_START', microtime(true));
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
-
+$loader = require __DIR__.'/../vendor/autoload.php';
+$loader->register();
 /*
 |--------------------------------------------------------------------------
 | Start Application
