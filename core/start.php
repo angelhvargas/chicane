@@ -45,6 +45,8 @@ $app = new Chicane\Application(
     realpath(__DIR__.'/../')
 );
 
+$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
 $app->registerInstance($view_engine);
 $app->registerInstance($error_notificator);
 
@@ -55,17 +57,9 @@ $app->registerInstance($error_notificator);
 |
 |
 */
-$route_collection = new RouteCollection();
-include __DIR__.'/../app/http/routes.php';
-
-foreach ($routes as $name => $route) {
-    $route_collection->add($name, $route);
-}
-$context = new RequestContext('/');
-
-$matcher = new UrlMatcher($route_collection, $context);
-
-$parameters = $matcher->match('/foo');
+$app->map('/hello/{name}', function ($name) {
+    return new Response('Hello '.$name);
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -104,4 +98,6 @@ $parameters = $matcher->match('/foo');
 |
 */
 
+$response = $app->handle($request);
+$response->send();
 return $app;
