@@ -25,7 +25,7 @@ class Application implements HttpKernelInterface {
     {
         $event = new \Chicane\Events\RequestEvent();
         $event->setRequest($request);   
-        $this->dispatcher->dispatch($event);
+        $this->dispatcher->dispatch('request', $event);
         $context = new \Symfony\Component\Routing\RequestContext();
         $context->fromRequest($request);
         $matcher = new \Symfony\Component\Routing\Matcher\UrlMatcher($this->routes, $context);  
@@ -46,7 +46,7 @@ class Application implements HttpKernelInterface {
     //add new route maps to the framework
     public function map($path, $controller)
     {
-        $this->routes->add($path, new Route(
+        $this->routes->add($path, new \Symfony\Component\Routing\Route(
             $path,
             ['controller' => $controller]
         ));
