@@ -1,5 +1,35 @@
 <?php
 
+
+use Symfony\Component\Routing\Matcher\UrlMatcher;
+use Symfony\Component\Routing\RequestContext;
+use Symfony\Component\Routing\RouteCollection;
+use Symfony\Component\Routing\Route;
+/*
+|--------------------------------------------------------------------------
+| Application error handler beautifier for dev env
+|--------------------------------------------------------------------------
+|
+*/
+
+$error_notificator = new \Whoops\Run;
+$error_notificator->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$error_notificator->register();
+
+/*
+|--------------------------------------------------------------------------
+| View engine intialization
+|--------------------------------------------------------------------------
+|
+|
+*/
+
+$view_cache = new Twig_Loader_Filesystem(__DIR__.'/../storage/cache');
+$view_engine = new Twig_Environment($view_cache);
+$view_engine_options = [
+    'cache' => __DIR__.'/../storage/compiled/views' 
+];
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -10,15 +40,27 @@
 | the IoC container for the system binding all of the various parts.
 |
 */
-$error_notificator = new \Whoops\Run;
-$error_notificator->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-$error_notificator->register();
 
 $app = new Chicane\Application(
-     realpath(__DIR__.'/../')
+    realpath(__DIR__.'/../')
 );
 
+$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
+$app->registerInstance($view_engine);
 $app->registerInstance($error_notificator);
+
+/*
+|--------------------------------------------------------------------------
+| Include Route collection
+|--------------------------------------------------------------------------
+|
+|
+*/
+$app->map('/hello/{name}', function ($name) {
+    return new Response('Hello '.$name);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
@@ -56,4 +98,6 @@ $app->registerInstance($error_notificator);
 |
 */
 
+$response = $app->handle($request);
+$response->send();
 return $app;

@@ -9,6 +9,7 @@
         "symfony/cache": "^4.0",
         "symfony/config": "^4.0",
         "symfony/debug-pack": "^1.0",
+        "symfony/event-dispatcher": "^4.0",
         "symfony/expression-language": "^4.0",
         "symfony/finder": "^4.0",
         "symfony/routing": "^4.0"
