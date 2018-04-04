@@ -1,10 +1,9 @@
 <?php
-
-
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Application error handler beautifier for dev env
@@ -40,11 +39,8 @@ $view_engine_options = [
 | the IoC container for the system binding all of the various parts.
 |
 */
-
-$app = new Chicane\Application(
-    realpath(__DIR__.'/../')
-);
-
+$real_path = realpath(__DIR__.'/../');
+$app = new Chicane\Application(); 
 $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 
 $app->registerInstance($view_engine);
@@ -58,7 +54,7 @@ $app->registerInstance($error_notificator);
 |
 */
 $app->map('/hello/{name}', function ($name) {
-    return new Response('Hello '.$name);
+    return new \Symfony\Component\HttpFoundation\Response('Hello '.$name['name']);
 });
 
 /*
