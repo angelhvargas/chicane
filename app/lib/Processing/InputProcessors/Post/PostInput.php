@@ -11,11 +11,8 @@ namespace Sil\Processing\InputProcessors\Post;
 
 use Sil\Processing\InputProcessors\InputProcessorInterface;
 
-class PostInput extends AbstractPostInput implements InputProcessorInterface
-{
-
-
-    /**
+class PostInput extends AbstractPostInput implements InputProcessorInterface {
+  /**
      * @param array $data
      * @return mixed
      */
@@ -26,7 +23,7 @@ class PostInput extends AbstractPostInput implements InputProcessorInterface
             if ($key == 'title') {
                 //todo
 
-            } else if ($key == 'text')
+            } else if ($key == 'text') {
 
             }
         }
