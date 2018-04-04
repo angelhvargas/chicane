@@ -6,19 +6,28 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\EventDispatcher\EventDispatcher;
+use Symfony\Component\Routing\Matcher\UrlMatcher;
+use Symfony\Component\HttpKernel\Controller\ControllerResolver;
+use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
+use Symfony\Component\Routing\RequestContext;
 
-class Application implements HttpKernelInterface {
+class Application extends IoC\Container implements HttpKernelInterface {
     
     protected $app_path;
     protected $instances;
     protected $routes;
     protected $dispatcher;
+    protected $matcher;
+    protected $controller_resolver;
+    protected $argument_resolver;
 
-    public function __construct(string $app_path) 
+    public function __construct() 
     {
-        $this->path = $app_path;
         $this->routes = new RouteCollection();
+        $this->controler_resolver = new ControllerResolver();
+        $this->argument_resolver = new ArgumentResolver();
         $this->dispatcher = new EventDispatcher();
+        $this->matcher = new UrlMatcher($this->routes, new RequestContext());
     }
 
     public function handle(Request $request, $type = self::MASTER_REQUEST, $catch = true) 
@@ -26,17 +35,14 @@ class Application implements HttpKernelInterface {
         $event = new \Chicane\Events\RequestEvent();
         $event->setRequest($request);   
         $this->dispatcher->dispatch('request', $event);
-        $context = new \Symfony\Component\Routing\RequestContext();
+        $context = new RequestContext();
         $context->fromRequest($request);
-        $matcher = new \Symfony\Component\Routing\Matcher\UrlMatcher($this->routes, $context);  
+        $this->matcher->setContext($context);  
 
         try {
-            $attributes = $matcher->match($request->getPathInfo());
+            $attributes = $this->matcher->match($request->getPathInfo());
             $controller = $attributes['controller'];
-            unset ($attributes['controller']);
             $response = call_user_func($controller, $attributes);
-
-            $response = $controller;
         } catch(\Symfony\Component\Routing\Exception\ResourceNotFoundException $e) {
             $response = new Response('Not found!!!', Response::HTTP_NOT_FOUND);
         }
@@ -54,7 +60,7 @@ class Application implements HttpKernelInterface {
 
     // Associates an URL with a callback function
 
-    public function appPath()
+    public function getAppPath()
     {
         return $this->app_path;
     }
@@ -78,5 +84,10 @@ class Application implements HttpKernelInterface {
         else
             throw new \Exception("Can not register an instance as is not an object");
         return $this;
+    }
+
+    public function __call($name, $args){
+        $closure = $this->$name;
+        call_user_func_array( $closure, $args );
     }
 }

@@ -3,5 +3,5 @@ namespace Chicane\Contracts;
 
 interface ApplicationInterface 
 {
-    
+    //todo   
 }
