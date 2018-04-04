@@ -24,8 +24,7 @@ class PostInput extends AbstractPostInput implements InputProcessorInterface
         foreach ($data as $key => $value) {
 
             if ($key == 'title') {
-
-                $this->set
+                //todo
 
             } else if ($key == 'text')
 
