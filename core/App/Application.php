@@ -75,17 +75,6 @@ class Application extends IoC\Container implements HttpKernelInterface {
         return $this->dispatcher->dispatch($event);
     }
 
-    public function registerInstance($instance) {
-        if (isset($this->instances)) { 
-            $this->instances = [];
-        }
-        if (is_object($instance))
-            $this->instances[get_class($instance)] = $instance;
-        else
-            throw new \Exception("Can not register an instance as is not an object");
-        return $this;
-    }
-
     public function __call($name, $args){
         $closure = $this->$name;
         call_user_func_array( $closure, $args );
