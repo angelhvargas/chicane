@@ -6,31 +6,6 @@ use Symfony\Component\Routing\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Application error handler beautifier for dev env
-|--------------------------------------------------------------------------
-|
-*/
-
-$error_notificator = new \Whoops\Run;
-$error_notificator->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-$error_notificator->register();
-
-/*
-|--------------------------------------------------------------------------
-| View engine intialization
-|--------------------------------------------------------------------------
-|
-|
-*/
-
-$view_cache = new Twig_Loader_Filesystem(__DIR__.'/../storage/cache');
-$view_engine = new Twig_Environment($view_cache);
-$view_engine_options = [
-    'cache' => __DIR__.'/../storage/compiled/views' 
-];
-
-/*
-|--------------------------------------------------------------------------
 | Create The Application
 |--------------------------------------------------------------------------
 |
@@ -41,10 +16,36 @@ $view_engine_options = [
 */
 $real_path = realpath(__DIR__.'/../');
 $app = new Chicane\Application(); 
-$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 
-$app->registerInstance($view_engine);
-$app->registerInstance($error_notificator);
+/*
+|--------------------------------------------------------------------------
+| Application error handler beautifier for dev env
+|--------------------------------------------------------------------------
+|
+*/
+
+$app->register('Run', function() {
+    $error_notificator = new \Whoops\Run;
+    $error_notificator->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $error_notificator->register();
+});
+
+/*
+|--------------------------------------------------------------------------
+| View engine intialization
+|--------------------------------------------------------------------------
+|
+|
+*/
+$app->register('View', function() { 
+    $view_cache = new Twig_Loader_Filesystem(__DIR__.'/../storage/cache');
+    $view_engine = new Twig_Environment($view_cache);
+    $view_engine_options = [
+        'cache' => __DIR__.'/../storage/compiled/views' 
+    ];
+    return $view_engine;
+});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,9 +54,7 @@ $app->registerInstance($error_notificator);
 |
 |
 */
-$app->map('/hello/{name}', function ($name) {
-    return new \Symfony\Component\HttpFoundation\Response('Hello '.$name['name']);
-});
+require_once __DIR__."/../app/http/routes.php";
 
 /*
 |--------------------------------------------------------------------------
@@ -69,31 +68,32 @@ $app->map('/hello/{name}', function ($name) {
 */
 
 // $app->singleton(
-//     Illuminate\Contracts\Http\Kernel::class,
-//     App\Http\Kernel::class
-// );
-
-// $app->singleton(
-//     Illuminate\Contracts\Console\Kernel::class,
-//     App\Console\Kernel::class
-// );
-
-// $app->singleton(
-//     Illuminate\Contracts\Debug\ExceptionHandler::class,
-//     App\Exceptions\Handler::class
-// );
-
-/*
-|--------------------------------------------------------------------------
-| Return The Application
-|--------------------------------------------------------------------------
-|
-| This script returns the application instance. The instance is given to
+    //     Illuminate\Contracts\Http\Kernel::class,
+    //     App\Http\Kernel::class
+    // );
+    
+    // $app->singleton(
+        //     Illuminate\Contracts\Console\Kernel::class,
+        //     App\Console\Kernel::class
+        // );
+        
+        // $app->singleton(
+            //     Illuminate\Contracts\Debug\ExceptionHandler::class,
+            //     App\Exceptions\Handler::class
+            // );
+            
+            /*
+            |--------------------------------------------------------------------------
+            | Return The Application
+            |--------------------------------------------------------------------------
+            |
+            | This script returns the application instance. The instance is given to
 | the calling script so we can separate the building of the instances
 | from the actual running of the application and sending responses.
 |
 */
 
+$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 $response = $app->handle($request);
 $response->send();
 return $app;

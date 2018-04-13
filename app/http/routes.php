@@ -7,7 +7,6 @@
  * Please check documentation
  *
  */
-use Symfony\Component\Routing\Route;
- $routes = [
-     'foo' => new Route('/foo', array('_controller' => 'MyController'))
- ];
+$app->map('/hello/{name}', function ($name) {
+    return new \Symfony\Component\HttpFoundation\Response(phpinfo());
+});
