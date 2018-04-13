@@ -16,4 +16,3 @@
 */
 
 require_once __DIR__.'/../core/bootstrap.php';
-echo "bootstrapped";
