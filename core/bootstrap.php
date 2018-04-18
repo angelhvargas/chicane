@@ -13,22 +13,6 @@ define('app', null);
 $loader = require __DIR__.'/../vendor/autoload.php';
 $loader->register();
 
-use Doctrine\ORM\Tools\Setup;
-use Doctrine\ORM\EntityManager;
-
-$paths = array(__DIR__.'/../app/entities');
-$isDevMode = false;
-
-// the connection configuration
-$dbParams = array(
-    'driver'   => 'pdo_mysql',
-    'user'     => 'root',
-    'password' => '1234567890',
-    'dbname'   => 'chicane',
-);
-
-$config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
-$entityManager = EntityManager::create($dbParams, $config);
 /*
 |--------------------------------------------------------------------------
 | Start Application
