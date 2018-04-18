@@ -1,9 +1,4 @@
 <?php
-use Symfony\Component\Routing\Matcher\UrlMatcher;
-use Symfony\Component\Routing\RequestContext;
-use Symfony\Component\Routing\RouteCollection;
-use Symfony\Component\Routing\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -24,10 +19,36 @@ $app = new Chicane\Application();
 |
 */
 
-$app->register('Run', function() {
+$app->register('Error', function() {
     $error_notificator = new \Whoops\Run;
     $error_notificator->pushHandler(new \Whoops\Handler\PrettyPageHandler);
     $error_notificator->register();
+    return $error_notificator;
+});
+
+/*
+|--------------------------------------------------------------------------
+| Application error handler beautifier for dev env
+|--------------------------------------------------------------------------
+|
+*/
+
+$app->register('orm', function() {
+
+    $paths = array(__DIR__.'/../app/entities');
+    $isDevMode = false;
+
+    // the connection configuration
+    $dbParams = array(
+        'driver'   => 'pdo_mysql',
+        'user'     => 'root',
+        'password' => '1234567890',
+        'dbname'   => 'chicane',
+    );
+
+    $config = Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
+    $entityManager = Doctrine\ORM\EntityManager::create($dbParams, $config);
+    return $entityManager;
 });
 
 /*
@@ -37,8 +58,8 @@ $app->register('Run', function() {
 |
 |
 */
-$app->register('View', function() { 
-    $view_cache = new Twig_Loader_Filesystem(__DIR__.'/../storage/cache');
+$app->register('view', function() { 
+    $view_cache = new Twig_Loader_Filesystem(__DIR__.'/../app/views');
     $view_engine = new Twig_Environment($view_cache);
     $view_engine_options = [
         'cache' => __DIR__.'/../storage/compiled/views' 
