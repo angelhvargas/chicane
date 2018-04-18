@@ -11,7 +11,11 @@ use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 use Symfony\Component\Routing\RequestContext;
 use Chicane\IoC\Container;
-
+/**
+ *  Class Application
+ * This class handle the Inversion of Control principle. Also couple the main logic related to the kernel.
+ * 
+ */
 class Application extends Container implements HttpKernelInterface {
     
     protected $app_path;
@@ -21,7 +25,9 @@ class Application extends Container implements HttpKernelInterface {
     protected $matcher;
     protected $controller_resolver;
     protected $argument_resolver;
-
+    /**
+     * \Chicane\Application contructor.
+     */
     public function __construct() 
     {
         $this->routes = new RouteCollection();
@@ -30,7 +36,14 @@ class Application extends Container implements HttpKernelInterface {
         $this->dispatcher = new EventDispatcher();
         $this->matcher = new UrlMatcher($this->routes, new RequestContext());
     }
-
+    /**
+     * Function handle: this function handle any request comming to the front-end controller
+     *
+     * @param Request $request
+     * @param string $type
+     * @param boolean $catch
+     * @return Symfony\Component\HttpFoundation\Response
+     */
     public function handle(Request $request, $type = self::MASTER_REQUEST, $catch = true) 
     {
         $event = new \Chicane\Events\RequestEvent();
@@ -43,14 +56,21 @@ class Application extends Container implements HttpKernelInterface {
         try {
             $attributes = $this->matcher->match($request->getPathInfo());
             $controller = $attributes['controller'];
-            $response = call_user_func($controller, $attributes);
+            unset($attributes['controller']);
+			$response = call_user_func_array($controller, $attributes);
         } catch(\Symfony\Component\Routing\Exception\ResourceNotFoundException $e) {
             $response = new Response('Not found!!!', Response::HTTP_NOT_FOUND);
         }
 
         return $response;
     }
-    //add new route maps to the framework
+    /**
+     * Function map: map the routes to the framework.
+     *
+     * @param String $path
+     * @param Closure|Array $controller
+     * @return void
+     */
     public function map($path, $controller)
     {
         $this->routes->add($path, new \Symfony\Component\Routing\Route(
@@ -58,14 +78,13 @@ class Application extends Container implements HttpKernelInterface {
             ['controller' => $controller]
         ));
     }
-
-    // Associates an URL with a callback function
-
-    public function getAppPath()
-    {
-        return $this->app_path;
-    }
-
+    /**
+     * On: Bind event listener to the framework core logic
+     *
+     * @param String $event
+     * @param \Closure $callback
+     * @return void
+     */
     public function on($event, $callback)
     {
         $this->dispatcher->addListener($event, $callback);
