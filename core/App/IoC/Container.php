@@ -1,5 +1,5 @@
 <?php
-namespace Chicane\Ioc;
+namespace Chicane\IoC;
 
 class Container {
 
