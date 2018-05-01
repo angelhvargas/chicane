@@ -1,10 +1,10 @@
-<?php namespace Sil\Eventing;
+<?php namespace Chicane\Eventing;
 
 use Illuminate\Foundation\Application;
 
 /**
  * Class EventListenerTranslator
- * @package Sil\Eventing
+ * @package Chicane\Eventing
  */
 class EventListenerTranslator {
 
@@ -66,7 +66,7 @@ class EventListenerTranslator {
      */
 	private function createListener()
 	{
-		return $this->app->make('\\Sil\\'.get_class($this->parent).'s\\'.get_class($this->object).'s\\'.$this->listener, [strtolower(get_class($this->object)) => $this->object]);
+		return $this->app->make('\\Chicane\\'.get_class($this->parent).'s\\'.get_class($this->object).'s\\'.$this->listener, [strtolower(get_class($this->object)) => $this->object]);
 	}
 	
 }

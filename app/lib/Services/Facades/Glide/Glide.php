@@ -6,7 +6,7 @@
  * Time: 01:03
  */
 
-namespace Sil\Services\Facades;
+namespace Chicane\Services\Facades;
 use Illuminate\Support\Facades\Facade;
 
 class Glide extends Facade

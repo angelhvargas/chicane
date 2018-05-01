@@ -1,6 +1,6 @@
 <?php
 
-namespace Sil\Newsletters;
+namespace Chicane\Newsletters;
 
 interface NewsletterList{
     /**

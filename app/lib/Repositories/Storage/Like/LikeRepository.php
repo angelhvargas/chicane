@@ -6,7 +6,7 @@
  * Time: 11:24
  */
 
-namespace Sil\Repositories\Storage\Like;
+namespace Chicane\Repositories\Storage\Like;
 
 
 interface LikeRepository {

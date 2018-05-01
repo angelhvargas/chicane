@@ -6,7 +6,7 @@
  * Time: 16:30
  */
 
-namespace Sil\DataTools;
+namespace Chicane\DataTools;
 
 
 interface DataMigratorToolInterface {

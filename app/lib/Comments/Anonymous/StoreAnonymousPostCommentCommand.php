@@ -6,7 +6,7 @@
  * Time: 12:16
  */
 
-namespace Sil\Comments\Anonymous;
+namespace Chicane\Comments\Anonymous;
 
 
 class StoreAnonymousPostCommentCommand {

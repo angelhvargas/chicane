@@ -6,7 +6,7 @@
  * Time: 21:56
  */
 
-namespace Sil\Repositories\Storage\Nudge;
+namespace Chicane\Repositories\Storage\Nudge;
 
 
 interface NudgeRepository

@@ -6,12 +6,12 @@
  * Time: 17:17
  */
 
-namespace Sil\Processing\DataMappers;
+namespace Chicane\Processing\DataMappers;
 
 
 /**
  * Interface DataMapperInterface
- * @package Sil\Processing\DataMappers
+ * @package Chicane\Processing\DataMappers
  */
 interface DataMapperInterface {
 

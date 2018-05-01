@@ -1,6 +1,6 @@
 <?php 
-namespace Sil\Repositories\Storage\User\Eloquent;
-use Sil\Repositories\Storage\User\UserRepository as UserRepository;
+namespace Chicane\Repositories\Storage\User\Eloquent;
+use Chicane\Repositories\Storage\User\UserRepository as UserRepository;
 use User;
 use Redirect;
 use Validator;
@@ -14,7 +14,7 @@ use Match;
 
 /**
  * Class EloquentUserRepository
- * @package Sil\Repositories\Storage\User\Eloquent
+ * @package Chicane\Repositories\Storage\User\Eloquent
  */
 class EloquentUserRepository implements UserRepository {
 

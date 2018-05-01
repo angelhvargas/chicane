@@ -6,14 +6,14 @@
  * Time: 14:30
  */
 
-namespace Sil\Repositories\Storage\Activity\Eloquent;
+namespace Chicane\Repositories\Storage\Activity\Eloquent;
 
-use Sil\Repositories\Storage\Activity\ActivityRepository;
+use Chicane\Repositories\Storage\Activity\ActivityRepository;
 use Activity;
 
 /**
  * Class EloquentActivityRepository
- * @package Sil\Repositories\Storage\Activity\Eloquent
+ * @package Chicane\Repositories\Storage\Activity\Eloquent
  */
 class EloquentActivityRepository implements ActivityRepository{
 

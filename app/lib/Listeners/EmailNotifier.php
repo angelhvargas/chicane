@@ -6,13 +6,13 @@
  * Time: 16:41
  */
 
-namespace Sil\Listeners;
+namespace Chicane\Listeners;
 
 
-use Sil\Comments\Likes\CommentWasLiked;
-use Sil\Eventing\EventListener;
-use Sil\Comments\CommentPostWasPosted;
-use Sil\Mailers\Notifications\NotifyActionsMailer as Mailer;
+use Chicane\Comments\Likes\CommentWasLiked;
+use Chicane\Eventing\EventListener;
+use Chicane\Comments\CommentPostWasPosted;
+use Chicane\Mailers\Notifications\NotifyActionsMailer as Mailer;
 use Post;
 use Like;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sil\Repositories\Channel;
+namespace Chicane\Repositories\Channel;
 
 interface ChannelRepository {
 

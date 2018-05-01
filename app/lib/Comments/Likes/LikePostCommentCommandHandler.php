@@ -6,12 +6,12 @@
  * Time: 16:41
  */
 
-namespace Sil\Comments\Likes;
+namespace Chicane\Comments\Likes;
 
 
-use Sil\Commanding\CommandHandler;
-use Sil\Eventing\EventDispatcher;
-use Sil\Repositories\Storage\Like\Eloquent\EloquentLikeRepository;
+use Chicane\Commanding\CommandHandler;
+use Chicane\Eventing\EventDispatcher;
+use Chicane\Repositories\Storage\Like\Eloquent\EloquentLikeRepository;
 
 class LikePostCommentCommandHandler implements CommandHandler {
 

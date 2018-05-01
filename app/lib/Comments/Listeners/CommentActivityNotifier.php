@@ -6,12 +6,12 @@
  * Time: 12:39
  */
 
-namespace Sil\Comments\Listeners;
+namespace Chicane\Comments\Listeners;
 
 
-use Sil\Comments\CommentPostWasPosted;
-use Sil\Comments\Likes\CommentWasLiked;
-use Sil\Eventing\EventListener;
+use Chicane\Comments\CommentPostWasPosted;
+use Chicane\Comments\Likes\CommentWasLiked;
+use Chicane\Eventing\EventListener;
 
 class CommentActivityNotifier extends EventListener
 {

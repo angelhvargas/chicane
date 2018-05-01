@@ -1,6 +1,6 @@
 <?php
 
-namespace Sil\Newsletters;
+namespace Chicane\Newsletters;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -10,8 +10,8 @@ class NewsletterListServiceProvider extends ServiceProvider{
 	public function register()
 	{
 		$this->app->bind(
-			'Sil\Newsletters\NewsletterList',
-			'Sil\Newsletters\MailChimp\NewsletterList'
+			'Chicane\Newsletters\NewsletterList',
+			'Chicane\Newsletters\MailChimp\NewsletterList'
 		);
 	}
 }

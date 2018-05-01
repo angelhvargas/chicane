@@ -5,7 +5,7 @@
  * Date: 08/05/2015
  * Time: 12:21
  */
-namespace Sil\Commanding;
+namespace Chicane\Commanding;
 
 interface CommandBus{
 

@@ -1,4 +1,4 @@
-<?php namespace Sil\Mailers\Notifications;
+<?php namespace Chicane\Mailers\Notifications;
 /**
  * Created by Silooette.
  * User: Angel
@@ -6,12 +6,12 @@
  * Time: 10:39
  * Definition: This class manage Notifications queue and dispatch every email to the users after an action
  */
-use Sil\Mailers\Mailer as Mailer;
+use Chicane\Mailers\Mailer as Mailer;
 use User;
 
 /**
  * Class NotifyActionsMailer
- * @package Sil\Mailers\Notifications
+ * @package Chicane\Mailers\Notifications
  */
 class NotifyActionsMailer extends Mailer{
 

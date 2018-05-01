@@ -6,7 +6,7 @@
  * Time: 16:57
  */
 
-namespace Sil\Processing;
+namespace Chicane\Processing;
 use Illuminate\Foundation\Application;
 
 class DefaultOutputDataProcessor implements DataProcessor{

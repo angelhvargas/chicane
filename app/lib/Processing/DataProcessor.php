@@ -6,12 +6,12 @@
  * Time: 15:35
  */
 
-namespace Sil\Processing;
+namespace Chicane\Processing;
 
 
 /**
  * Interface DataProcessor
- * @package Sil\Processing
+ * @package Chicane\Processing
  */
 interface DataProcessor {
 

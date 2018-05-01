@@ -1,5 +1,5 @@
 <?php 
-namespace Sil\Repositories\Storage\User;
+namespace Chicane\Repositories\Storage\User;
 use Illuminate\Support\ServiceProvider;
  
 class UserServiceProvider extends ServiceProvider {
@@ -8,8 +8,8 @@ class UserServiceProvider extends ServiceProvider {
   {
     $this->app->bind
     (
-      'Sil\Repositories\Storage\User\UserRepository',
-      'Sil\Repositories\Storage\User\Eloquent\EloquentUserRepository'
+      'Chicane\Repositories\Storage\User\UserRepository',
+      'Chicane\Repositories\Storage\User\Eloquent\EloquentUserRepository'
     );
   }
 }

@@ -6,7 +6,7 @@
  * Time: 14:03
  */
 
-namespace Sil\Accounts\Sessions;
+namespace Chicane\Accounts\Sessions;
 
 use User;
 use Illuminate\Support\Facades\Auth;

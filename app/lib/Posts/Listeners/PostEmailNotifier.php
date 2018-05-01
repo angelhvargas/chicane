@@ -6,15 +6,15 @@
  * Time: 12:33
  */
 
-namespace Sil\Posts\Listeners;
+namespace Chicane\Posts\Listeners;
 
 
-use Sil\Posts\Likes\PostWasLiked;
-use Sil\Eventing\EventListener;
-use Sil\Comments\LikePostWasPosted;
-use Sil\Mailers\Notifications\NotifyActionsMailer as Mailer;
+use Chicane\Posts\Likes\PostWasLiked;
+use Chicane\Eventing\EventListener;
+use Chicane\Comments\LikePostWasPosted;
+use Chicane\Mailers\Notifications\NotifyActionsMailer as Mailer;
 use Like;
-use Sil\Posts\Nudges\PostWasNudged;
+use Chicane\Posts\Nudges\PostWasNudged;
 
 class PostEmailNotifier extends EventListener
 {

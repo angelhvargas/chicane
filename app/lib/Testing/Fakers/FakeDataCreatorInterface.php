@@ -6,7 +6,7 @@
  * Time: 23:22
  */
 
-namespace Sil\Testing\Fakers;
+namespace Chicane\Testing\Fakers;
 
 
 interface FakeDataCreatorInterface

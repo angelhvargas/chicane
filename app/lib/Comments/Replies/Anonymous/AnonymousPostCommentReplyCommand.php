@@ -6,12 +6,12 @@
  * Time: 17:15
  */
 
-namespace Sil\Comments\Replies\Anonymous;
+namespace Chicane\Comments\Replies\Anonymous;
 
 
 /**
  * Class AnonymousPostCommentReplyCommand
- * @package Sil\Comments\Replies\Anonymous
+ * @package Chicane\Comments\Replies\Anonymous
  */
 class AnonymousPostCommentReplyCommand
 {

@@ -6,7 +6,7 @@
  * Time: 23:11
  */
 
-namespace Sil\Posts\Listeners;
+namespace Chicane\Posts\Listeners;
 
 
 class PostInternalNotifier

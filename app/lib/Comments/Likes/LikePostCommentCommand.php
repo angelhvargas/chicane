@@ -6,7 +6,7 @@
  * Time: 16:40
  */
 
-namespace Sil\Comments\Likes;
+namespace Chicane\Comments\Likes;
 
 
 class LikePostCommentCommand {

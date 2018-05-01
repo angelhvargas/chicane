@@ -1,4 +1,4 @@
-<?php namespace Sil\Repositories\Storage\User;
+<?php namespace Chicane\Repositories\Storage\User;
  use User;
 interface UserRepository 
 {

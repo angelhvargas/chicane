@@ -1,11 +1,11 @@
 <?php
 
-namespace Sil\Eventing;
+namespace Chicane\Eventing;
 
 
 /**
  * Class EventGenerator
- * @package Sil\Eventing
+ * @package Chicane\Eventing
  */
 trait EventGenerator {
 

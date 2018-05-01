@@ -1,4 +1,4 @@
-<?php namespace Sil\Repositories\Storage\Post;
+<?php namespace Chicane\Repositories\Storage\Post;
 
 use Illuminate\Support\ServiceProvider;
 

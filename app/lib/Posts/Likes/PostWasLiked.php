@@ -1,4 +1,4 @@
-<?php namespace Sil\Posts\Likes;
+<?php namespace Chicane\Posts\Likes;
 
 /**
  * Created by PhpStorm.

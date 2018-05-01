@@ -1,6 +1,6 @@
-<?php namespace Sil\Newsletters\Mailchimp;
+<?php namespace Chicane\Newsletters\Mailchimp;
 
-use \Sil\Newsletters\NewsletterList as NewsletterListInterface;
+use \Chicane\Newsletters\NewsletterList as NewsletterListInterface;
 use Mailchimp;
 /**
  * 

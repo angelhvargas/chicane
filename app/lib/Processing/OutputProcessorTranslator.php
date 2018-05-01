@@ -6,12 +6,12 @@
  * Time: 11:29
  */
 
-namespace Sil\Processing;
+namespace Chicane\Processing;
 
 
 /**
  * Class ProcessorTranslator
- * @package Sil\Processing
+ * @package Chicane\Processing
  */
 class OutputProcessorTranslator {
 
@@ -23,7 +23,7 @@ class OutputProcessorTranslator {
     public function toDataTransformer($object)
     {
         $objectClass = get_class($object);
-        $class = "Sil\\Processing\\DataMappers\\". $objectClass. "\\". $objectClass . "DataMapper";
+        $class = "Chicane\\Processing\\DataMappers\\". $objectClass. "\\". $objectClass . "DataMapper";
 
         if ( !class_exists($class) ) {
 

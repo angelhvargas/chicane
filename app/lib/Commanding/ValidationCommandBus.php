@@ -6,7 +6,7 @@
  * Time: 12:22
  */
 
-namespace Sil\Commanding;
+namespace Chicane\Commanding;
 use Illuminate\Foundation\Application;
 
 class ValidationCommandBus implements CommandBus{

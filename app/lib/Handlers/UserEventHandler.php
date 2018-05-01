@@ -1,4 +1,4 @@
-<?php namespace Sil\Handlers;
+<?php namespace Chicane\Handlers;
 
 class UserEventHandler {
 

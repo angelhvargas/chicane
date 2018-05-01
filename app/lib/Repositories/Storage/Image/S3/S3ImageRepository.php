@@ -6,7 +6,7 @@
  * Time: 13:18
  */
 
-namespace Sil\Repositories\Storage\Image\S3;
+namespace Chicane\Repositories\Storage\Image\S3;
 
 
 class S3ImageRepository

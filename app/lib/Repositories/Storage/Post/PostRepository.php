@@ -6,12 +6,12 @@
  * Time: 21:44
  */
 
-namespace Sil\Repositories\Storage\Post;
+namespace Chicane\Repositories\Storage\Post;
 
 
 /**
  * Interface PostRepository
- * @package Sil\Repositories\Post
+ * @package Chicane\Repositories\Post
  */
 interface PostRepository
 {

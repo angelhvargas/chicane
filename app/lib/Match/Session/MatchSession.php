@@ -6,7 +6,7 @@
  * Time: 16:24
  */
 
-namespace Sil\Match\Session;
+namespace Chicane\Match\Session;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Session\Store as Session;

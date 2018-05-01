@@ -1,4 +1,4 @@
-<?php namespace Sil\Mailers;
+<?php namespace Chicane\Mailers;
 /**
  * Created by Silooette.
  * User: Angel

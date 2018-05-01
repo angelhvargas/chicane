@@ -6,7 +6,7 @@
  * Time: 12:45
  */
 
-namespace Sil\Commanding;
+namespace Chicane\Commanding;
 
 
 class CommandTranslator {

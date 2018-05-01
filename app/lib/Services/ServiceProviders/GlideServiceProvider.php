@@ -6,7 +6,7 @@
  * Time: 23:04
  */
 
-namespace Sil\Services\ServiceProviders;
+namespace Chicane\Services\ServiceProviders;
 
 
 use Illuminate\Support\ServiceProvider;

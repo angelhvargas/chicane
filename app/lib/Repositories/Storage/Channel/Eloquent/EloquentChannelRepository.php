@@ -1,7 +1,7 @@
 <?php
 
-namespace Sil\Repositories\Channel\Eloquent;
-use Sil\Repositories\Channel\ChannelRepository;
+namespace Chicane\Repositories\Channel\Eloquent;
+use Chicane\Repositories\Channel\ChannelRepository;
 use Topic;
 
 class EloquentChannelRepository implements ChannelRepository{

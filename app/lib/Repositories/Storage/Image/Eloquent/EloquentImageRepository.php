@@ -6,7 +6,7 @@
  * Time: 01:00
  */
 
-namespace Sil\Repositories\Storage\Image\Eloquent;
+namespace Chicane\Repositories\Storage\Image\Eloquent;
 
 
 class EloquentImageRepository

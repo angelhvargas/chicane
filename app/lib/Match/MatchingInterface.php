@@ -6,11 +6,11 @@
  * Time: 16:53
  */
 
-namespace Sil\Match;
+namespace Chicane\Match;
 
 /**
  * Interface MatchingInterface
- * @package Sil\Match
+ * @package Chicane\Match
  */
 interface MatchingInterface
 {

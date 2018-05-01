@@ -1,6 +1,6 @@
 <?php
-namespace Sil\DataTools\Eloquent;
-use \Sil\DataTools\DataMigratorToolInterface;
+namespace Chicane\DataTools\Eloquent;
+use \Chicane\DataTools\DataMigratorToolInterface;
 use Illuminate\Database\Eloquent;
 use User;
 use Post;

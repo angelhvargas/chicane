@@ -6,16 +6,16 @@
  * Time: 16:47
  */
 
-namespace Sil\Match\Eloquent;
+namespace Chicane\Match\Eloquent;
 
 use Illuminate\Database\Eloquent\Collection as Collection;
-use Sil\Match\MatchingInterface as MatchingInterface;
+use Chicane\Match\MatchingInterface as MatchingInterface;
 use User;
 
 
 /**
  * Class UserMatching
- * @package Sil\Match\Eloquent
+ * @package Chicane\Match\Eloquent
  */
 class UserMatching implements MatchingInterface
 {

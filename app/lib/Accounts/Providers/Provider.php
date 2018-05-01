@@ -6,7 +6,7 @@
  * Time: 20:28
  */
 
-namespace Sil\Accounts\Providers;
+namespace Chicane\Accounts\Providers;
 
 
 abstract class Provider

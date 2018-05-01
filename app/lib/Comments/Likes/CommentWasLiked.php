@@ -6,13 +6,13 @@
  * Time: 17:16
  */
 
-namespace Sil\Comments\Likes;
+namespace Chicane\Comments\Likes;
 
 use Like;
 
 /**
  * Class CommentWasLiked
- * @package Sil\Comments\Likes
+ * @package Chicane\Comments\Likes
  */
 class CommentWasLiked {
 

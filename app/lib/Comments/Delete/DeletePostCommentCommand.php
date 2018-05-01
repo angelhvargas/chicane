@@ -6,7 +6,7 @@
  * Time: 17:42
  */
 
-namespace Sil\Comments\Delete;
+namespace Chicane\Comments\Delete;
 
 
 class DeletePostCommentCommand {

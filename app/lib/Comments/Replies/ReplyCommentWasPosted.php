@@ -6,7 +6,7 @@
  * Time: 16:44
  */
 
-namespace Sil\Comments;
+namespace Chicane\Comments;
 
 
 class ReplyCommentPostWasPosted {

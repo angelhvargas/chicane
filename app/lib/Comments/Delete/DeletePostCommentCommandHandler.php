@@ -6,10 +6,10 @@
  * Time: 17:44
  */
 
-namespace Sil\Comments\Delete;
+namespace Chicane\Comments\Delete;
 
-use Sil\Repositories\Comment\Eloquent\EloquentCommentRepository;
-use Sil\Commanding\CommandHandler;
+use Chicane\Repositories\Comment\Eloquent\EloquentCommentRepository;
+use Chicane\Commanding\CommandHandler;
 
 class DeletePostCommentCommandHandler implements CommandHandler{
 

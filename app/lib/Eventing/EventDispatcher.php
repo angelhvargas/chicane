@@ -6,7 +6,7 @@
  * Time: 15:01
  */
 
-namespace Sil\Eventing;
+namespace Chicane\Eventing;
 
 
 use Illuminate\Events\Dispatcher;

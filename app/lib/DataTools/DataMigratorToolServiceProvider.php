@@ -1,5 +1,5 @@
 <?php
-namespace Sil\DataTools;
+namespace Chicane\DataTools;
 
 use \Illuminate\Support\ServiceProvider;
 
@@ -8,8 +8,8 @@ class DataMigratorToolServiceProvider extends ServiceProvider{
     public function register(){
 
         $this->app->bind(
-          'Sil\DataTools\DataMigratorToolInterface',
-            'Sil\DataTools\Eloquent\DataMigratorTool'
+          'Chicane\DataTools\DataMigratorToolInterface',
+            'Chicane\DataTools\Eloquent\DataMigratorTool'
         );
     }
 }

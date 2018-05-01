@@ -6,7 +6,7 @@
  * Time: 16:51
  */
 
-namespace Sil\Match;
+namespace Chicane\Match;
 
 
 use Illuminate\Support\ServiceProvider as ServiceProvider;
@@ -16,8 +16,8 @@ class MatchingServiceProvider extends ServiceProvider{
     public function register()
     {
         $this->app->bind(
-          'Sil\Match\MatchingInterface',
-            'Sil\Match\Eloquent\UserMatching'
+          'Chicane\Match\MatchingInterface',
+            'Chicane\Match\Eloquent\UserMatching'
         );
 
     }

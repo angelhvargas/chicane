@@ -6,12 +6,12 @@
  * Time: 16:52
  */
 
-namespace Sil\Comments\Replies;
+namespace Chicane\Comments\Replies;
 
 
 /**
  * Class StorePostCommentReply
- * @package Sil\Comments
+ * @package Chicane\Comments
  */
 class StorePostCommentReplyCommand {
     /**

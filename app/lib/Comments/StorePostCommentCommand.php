@@ -6,7 +6,7 @@
  * Time: 12:16
  */
 
-namespace Sil\Comments;
+namespace Chicane\Comments;
 
 
 class StorePostCommentCommand {

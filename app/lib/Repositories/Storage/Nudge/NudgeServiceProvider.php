@@ -1,6 +1,6 @@
 <?php
 
-namespace Sil\Repositories\Storage\Nudge;
+namespace Chicane\Repositories\Storage\Nudge;
 
 
 use Illuminate\Support\ServiceProvider;
@@ -14,8 +14,8 @@ class NudgeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Sil\Repositories\Storage\Nudge\NudgeRepository',
-            'Sil\Repositories\Storage\Nudge\Eloquent\EloquentNudgeRepository');
+        $this->app->bind('Chicane\Repositories\Storage\Nudge\NudgeRepository',
+            'Chicane\Repositories\Storage\Nudge\Eloquent\EloquentNudgeRepository');
     }
 
 }

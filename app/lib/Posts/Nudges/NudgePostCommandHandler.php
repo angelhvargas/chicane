@@ -1,13 +1,13 @@
 <?php
 
-namespace Sil\Posts\Nudges;
+namespace Chicane\Posts\Nudges;
 
-use Sil\Eventing\EventDispatcher;
-use Sil\Repositories\Storage\Nudge\Eloquent\EloquentNudgeRepository;
+use Chicane\Eventing\EventDispatcher;
+use Chicane\Repositories\Storage\Nudge\Eloquent\EloquentNudgeRepository;
 
 /**
  * Class NudgePostCommandHandler
- * @package Sil\Posts\Nudges
+ * @package Chicane\Posts\Nudges
  */
 class NudgePostCommandHandler
 {

@@ -6,19 +6,19 @@
  * Time: 11:23
  */
 
-namespace Sil\Repositories\Storage\Like\Eloquent;
+namespace Chicane\Repositories\Storage\Like\Eloquent;
 
 
 use Aws\CloudFront\Exception\Exception;
-use Sil\Repositories\Storage\Like\LikeRepository;
-use Sil\Comments\Likes\CommentWasLiked;
-use Sil\Eventing\EventListenerTranslator;
+use Chicane\Repositories\Storage\Like\LikeRepository;
+use Chicane\Comments\Likes\CommentWasLiked;
+use Chicane\Eventing\EventListenerTranslator;
 use User;
 use Like;
 
 /**
  * Class EloquentLikeRepository
- * @package Sil\Repositories\Storage\Like\Eloquent
+ * @package Chicane\Repositories\Storage\Like\Eloquent
  */
 class EloquentLikeRepository implements LikeRepository{
 

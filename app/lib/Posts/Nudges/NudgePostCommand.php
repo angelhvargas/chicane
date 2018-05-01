@@ -1,15 +1,15 @@
 <?php
 
-namespace Sil\Posts\Nudges;
+namespace Chicane\Posts\Nudges;
 
 
 /**
  * Class NudgePostCommand
- * @package Sil\Posts\Nudges
+ * @package Chicane\Posts\Nudges
  */
 /**
  * Class NudgePostCommand
- * @package Sil\Posts\Nudges
+ * @package Chicane\Posts\Nudges
  */
 class NudgePostCommand
 {

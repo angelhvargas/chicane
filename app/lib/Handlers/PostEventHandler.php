@@ -1,6 +1,6 @@
-<?php namespace Sil\Handlers;
+<?php namespace Chicane\Handlers;
 
-use Sil\Mailers\Notifications\NotifyActionsMailer as NotifyActionsMailer;
+use Chicane\Mailers\Notifications\NotifyActionsMailer as NotifyActionsMailer;
 use Activity;
 use Nudge;
 use Illuminate\Support\Facades\Auth;
@@ -64,8 +64,8 @@ class PostEventHandler {
 
     public function subscribe($events)
     {
-        $events->listen('post.nudge', 'Sil\Handlers\PostEventHandler@onNudge');
-        $events->listen('post.like', 'Sil\Handlers\PostEventHandler@onLike');
+        $events->listen('post.nudge', 'Chicane\Handlers\PostEventHandler@onNudge');
+        $events->listen('post.like', 'Chicane\Handlers\PostEventHandler@onLike');
 
     }
 }

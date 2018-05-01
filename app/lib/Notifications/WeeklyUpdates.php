@@ -1,5 +1,5 @@
 <?php
-namespace Sil\Notifications;
+namespace Chicane\Notifications;
 
 interface WeeklyUpdates{
 	

@@ -6,12 +6,12 @@
  * Time: 01:35
  */
 
-namespace Sil\Processing\InputProcessors;
+namespace Chicane\Processing\InputProcessors;
 
 
 /**
  * Interface InputProcessorInterface
- * @package Sil\Processing\InputProcessors
+ * @package Chicane\Processing\InputProcessors
  */
 interface InputProcessorInterface
 {

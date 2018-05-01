@@ -6,9 +6,9 @@
  * Time: 21:46
  */
 
-namespace Sil\Repositories\Storage\Post\Eloquent;
+namespace Chicane\Repositories\Storage\Post\Eloquent;
 
-use Sil\Repositories\Storage\Post\PostRepository;
+use Chicane\Repositories\Storage\Post\PostRepository;
 use Topic;
 use Post;
 

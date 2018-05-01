@@ -6,7 +6,7 @@
  * Time: 16:38
  */
 
-namespace Sil\Eventing;
+namespace Chicane\Eventing;
 use ReflectionClass;
 
 class EventListener {

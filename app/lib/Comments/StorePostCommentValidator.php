@@ -6,7 +6,7 @@
  * Time: 12:33
  */
 
-namespace Sil\Comments;
+namespace Chicane\Comments;
 
 
 

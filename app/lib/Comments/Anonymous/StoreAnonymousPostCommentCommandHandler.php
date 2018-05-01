@@ -6,10 +6,10 @@
  * Time: 12:51
  */
 
-namespace Sil\Comments\Anonymous;
-use Sil\Eventing\EventDispatcher;
-use Sil\Commanding\CommandHandler;
-use Sil\Repositories\Comment\Eloquent\EloquentCommentRepository;
+namespace Chicane\Comments\Anonymous;
+use Chicane\Eventing\EventDispatcher;
+use Chicane\Commanding\CommandHandler;
+use Chicane\Repositories\Comment\Eloquent\EloquentCommentRepository;
 
 class StoreAnonymousPostCommentCommandHandler implements CommandHandler{
 

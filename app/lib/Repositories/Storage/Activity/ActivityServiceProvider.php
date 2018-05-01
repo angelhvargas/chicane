@@ -6,7 +6,7 @@
  * Time: 15:13
  */
 
-namespace Sil\Repositories\Storage\Activity;
+namespace Chicane\Repositories\Storage\Activity;
 
 use Illuminate\Support\ServiceProvider;
 class ActivityServiceProvider extends ServiceProvider{
@@ -17,8 +17,8 @@ class ActivityServiceProvider extends ServiceProvider{
      */
     public function register()
     {
-        $this->app->bind('Sil\Repositories\Storage\Activity\ActivityRepository',
-                            'Sil\Repositories\Storage\Activity\EloquentActivityRepository');
+        $this->app->bind('Chicane\Repositories\Storage\Activity\ActivityRepository',
+                            'Chicane\Repositories\Storage\Activity\EloquentActivityRepository');
     }
 
 }

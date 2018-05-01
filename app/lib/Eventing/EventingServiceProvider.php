@@ -6,7 +6,7 @@
  * Time: 17:13
  */
 
-namespace Sil\Eventing;
+namespace Chicane\Eventing;
 
 use Illuminate\Support\ServiceProvider;
 

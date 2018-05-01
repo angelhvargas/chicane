@@ -6,7 +6,7 @@
  * Time: 11:24
  */
 
-namespace Sil\Repositories\Storage\Like;
+namespace Chicane\Repositories\Storage\Like;
 
 
 
@@ -14,7 +14,7 @@ use Illuminate\Support\ServiceProvider;
 
 /**
  * Class LikeServiceProvider
- * @package Sil\Repositories\Storage\Like
+ * @package Chicane\Repositories\Storage\Like
  */
 class LikeServiceProvider extends ServiceProvider {
 
@@ -23,8 +23,8 @@ class LikeServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->bind('Sil\Repositories\Like\Eloquent\EloquentLikeRepository',
-            'Sil\Repositories\Like\LikeRepository');
+        $this->app->bind('Chicane\Repositories\Like\Eloquent\EloquentLikeRepository',
+            'Chicane\Repositories\Like\LikeRepository');
     }
 
 

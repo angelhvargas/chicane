@@ -6,7 +6,7 @@
  * Time: 09:21
  */
 
-namespace Sil\Repositories\Comment;
+namespace Chicane\Repositories\Comment;
 use Comment;
 use User;
 

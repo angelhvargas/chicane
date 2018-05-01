@@ -1,17 +1,17 @@
 <?php
 
 
-namespace Sil\Repositories\Storage\Nudge\Eloquent;
+namespace Chicane\Repositories\Storage\Nudge\Eloquent;
 
 
-use Sil\Eventing\EventListenerTranslator;
-use Sil\Repositories\Storage\Nudge\NudgeRepository;
+use Chicane\Eventing\EventListenerTranslator;
+use Chicane\Repositories\Storage\Nudge\NudgeRepository;
 use User;
 use Nudge;
 
 /**
  * Class EloquentNudgeRepository
- * @package Sil\Repositories\Storage\Nudge\Eloquent
+ * @package Chicane\Repositories\Storage\Nudge\Eloquent
  */
 class EloquentNudgeRepository implements NudgeRepository
 {

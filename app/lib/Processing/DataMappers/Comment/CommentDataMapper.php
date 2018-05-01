@@ -6,14 +6,14 @@
  * Time: 18:17
  */
 
-namespace Sil\Processing\DataMappers\Comment;
+namespace Chicane\Processing\DataMappers\Comment;
 
-use Sil\Processing\DataMappers\DataMapperInterface;
+use Chicane\Processing\DataMappers\DataMapperInterface;
 use Post;
 
 /**
  * Class CommentDataMapper
- * @package Sil\Processing\DataMappers\Comment
+ * @package Chicane\Processing\DataMappers\Comment
  */
 class CommentDataMapper implements DataMapperInterface{
 

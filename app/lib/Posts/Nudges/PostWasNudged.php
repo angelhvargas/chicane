@@ -1,12 +1,12 @@
 <?php
 
-namespace Sil\Posts\Nudges;
+namespace Chicane\Posts\Nudges;
 
 use Nudge;
 
 /**
  * Class PostWasNudged
- * @package Sil\Posts\Nudges
+ * @package Chicane\Posts\Nudges
  */
 class PostWasNudged
 {

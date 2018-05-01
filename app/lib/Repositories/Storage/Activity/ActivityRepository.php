@@ -6,7 +6,7 @@
  * Time: 14:26
  */
 
-namespace Sil\Repositories\Storage\Activity;
+namespace Chicane\Repositories\Storage\Activity;
 
 
 interface ActivityRepository {

@@ -1,9 +1,9 @@
-<?php namespace Sil\Posts\Likes;
+<?php namespace Chicane\Posts\Likes;
 
 
-use Sil\Commanding\CommandHandler;
-use Sil\Eventing\EventDispatcher;
-use Sil\Repositories\Storage\Like\Eloquent\EloquentLikeRepository;
+use Chicane\Commanding\CommandHandler;
+use Chicane\Eventing\EventDispatcher;
+use Chicane\Repositories\Storage\Like\Eloquent\EloquentLikeRepository;
 
 class LikePostCommandHandler implements CommandHandler {
 

@@ -6,12 +6,12 @@
  * Time: 01:02
  */
 
-namespace Sil\Repositories\Storage\Image;
+namespace Chicane\Repositories\Storage\Image;
 
 
 /**
  * Interface ImageRepository
- * @package Sil\Repositories\Storage\Image
+ * @package Chicane\Repositories\Storage\Image
  */
 interface ImageRepository
 {

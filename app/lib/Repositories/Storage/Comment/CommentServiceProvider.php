@@ -6,7 +6,7 @@
  * Time: 08:34
  */
 
-namespace Sil\Repositories\Comment;
+namespace Chicane\Repositories\Comment;
 
 use Illuminate\Support\ServiceProvider;
 class CommentServiceProvider extends ServiceProvider {
@@ -17,8 +17,8 @@ class CommentServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->bind('Sil\Repositories\Comment\CommentRepository',
-                'Sil\Repositories\Comment\EloquentCommentRepository');
+        $this->app->bind('Chicane\Repositories\Comment\CommentRepository',
+                'Chicane\Repositories\Comment\EloquentCommentRepository');
     }
 
 

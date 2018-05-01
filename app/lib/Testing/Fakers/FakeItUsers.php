@@ -6,11 +6,11 @@
  * Time: 21:39
  */
 
-namespace Sil\Testing\Fakers;
+namespace Chicane\Testing\Fakers;
 
 
 use Faker\Factory as Faker;
-use Sil\Repositories\Storage\User\Eloquent\EloquentUserRepository as User;
+use Chicane\Repositories\Storage\User\Eloquent\EloquentUserRepository as User;
 
 class FakeItUsers implements FakeDataCreatorInterface
 {

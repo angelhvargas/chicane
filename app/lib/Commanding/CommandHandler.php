@@ -6,12 +6,12 @@
  * Time: 12:52
  */
 
-namespace Sil\Commanding;
+namespace Chicane\Commanding;
 
 
 /**
  * Interface CommandHandler
- * @package Sil\Commanding
+ * @package Chicane\Commanding
  */
 interface CommandHandler {
 

@@ -6,12 +6,12 @@
  * Time: 20:28
  */
 
-namespace Sil\Accounts\Providers;
+namespace Chicane\Accounts\Providers;
 
 
 use Facebook\FacebookClient;
 use Facebook\Helpers\FacebookRedirectLoginHelper;
-use Sil\Accounts\Contracts\Provider as ProviderInterface;
+use Chicane\Accounts\Contracts\Provider as ProviderInterface;
 use Facebook\Facebook as FacebookSDK;
 
 class Facebook extends Provider implements ProviderInterface{

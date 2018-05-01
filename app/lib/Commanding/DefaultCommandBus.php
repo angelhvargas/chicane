@@ -6,7 +6,7 @@
  * Time: 12:40
  */
 
-namespace Sil\Commanding;
+namespace Chicane\Commanding;
 
 
 use Illuminate\Foundation\Application;

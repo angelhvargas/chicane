@@ -6,13 +6,13 @@
  * Time: 11:11
  */
 
-namespace Sil\Match\Eloquent;
+namespace Chicane\Match\Eloquent;
 
 use User;
 
 /**
  * Class MatchingQueries
- * @package Sil\Match\Eloquent
+ * @package Chicane\Match\Eloquent
  */
 class MatchingQueries
 {

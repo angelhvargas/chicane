@@ -6,7 +6,7 @@
  * Time: 01:02
  */
 
-namespace Sil\Repositories\Storage\Image;
+namespace Chicane\Repositories\Storage\Image;
 
 
 class ImageServiceProvider

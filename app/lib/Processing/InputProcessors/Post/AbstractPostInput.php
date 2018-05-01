@@ -6,12 +6,12 @@
  * Time: 01:40
  */
 
-namespace Sil\Processing\InputProcessors\Post;
+namespace Chicane\Processing\InputProcessors\Post;
 
 
 /**
  * Class AbstractPostInput
- * @package Sil\Processing\InputProcessors\Post
+ * @package Chicane\Processing\InputProcessors\Post
  */
 abstract class AbstractPostInput
 {

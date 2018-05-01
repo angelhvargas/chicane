@@ -6,16 +6,16 @@
  * Time: 16:52
  */
 
-namespace Sil\Comments\Replies;
+namespace Chicane\Comments\Replies;
 
-use Sil\Commanding\CommandHandler;
-use Sil\Repositories\Comment\Eloquent\EloquentCommentRepository;
-use Sil\Eventing\EventDispatcher;
+use Chicane\Commanding\CommandHandler;
+use Chicane\Repositories\Comment\Eloquent\EloquentCommentRepository;
+use Chicane\Eventing\EventDispatcher;
 
 
 /**
  * Class StorePostCommentReplyCommandHandler
- * @package Sil\Comments\Replies
+ * @package Chicane\Comments\Replies
  */
 class StorePostCommentReplyCommandHandler implements CommandHandler{
 

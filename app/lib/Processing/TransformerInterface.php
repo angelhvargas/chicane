@@ -6,7 +6,7 @@
  * Time: 17:17
  */
 
-namespace Sil\Processing;
+namespace Chicane\Processing;
 
 
 interface TransformerInterface {

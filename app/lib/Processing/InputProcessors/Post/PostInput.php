@@ -6,10 +6,10 @@
  * Time: 01:42
  */
 
-namespace Sil\Processing\InputProcessors\Post;
+namespace Chicane\Processing\InputProcessors\Post;
 
 
-use Sil\Processing\InputProcessors\InputProcessorInterface;
+use Chicane\Processing\InputProcessors\InputProcessorInterface;
 
 class PostInput extends AbstractPostInput implements InputProcessorInterface {
   /**

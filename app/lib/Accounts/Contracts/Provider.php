@@ -6,7 +6,7 @@
  * Time: 20:31
  */
 
-namespace Sil\Accounts\Contracts;
+namespace Chicane\Accounts\Contracts;
 
 
 interface Provider

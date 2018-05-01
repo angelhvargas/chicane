@@ -1,6 +1,6 @@
-<?php namespace Sil\Notifications\Mailchimp;
+<?php namespace Chicane\Notifications\Mailchimp;
 
-use Sil\Notifications\WeeklyUpdates as WeeklyUpdatesInterface;
+use Chicane\Notifications\WeeklyUpdates as WeeklyUpdatesInterface;
 use Mailchimp;
 use models\User;
 use models\Post;

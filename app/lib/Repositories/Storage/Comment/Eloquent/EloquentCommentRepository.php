@@ -6,19 +6,19 @@
  * Time: 09:18
  */
 
-namespace Sil\Repositories\Comment\Eloquent;
+namespace Chicane\Repositories\Comment\Eloquent;
 
 use User;
 use Comment;
 use Post;
-use Sil\Repositories\Comment\CommentRepository;
-use Sil\Comments\CommentPostWasPosted;
-use Sil\Comments\Replies\CommentPostReplyWasPosted;
+use Chicane\Repositories\Comment\CommentRepository;
+use Chicane\Comments\CommentPostWasPosted;
+use Chicane\Comments\Replies\CommentPostReplyWasPosted;
 
 
 /**
  * Class EloquentCommentRepository
- * @package Sil\Repositories\Comment\Eloquent
+ * @package Chicane\Repositories\Comment\Eloquent
  */
 class EloquentCommentRepository implements CommentRepository {
 
