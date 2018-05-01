@@ -1,4 +1,6 @@
 <?php
+
+use Chicane\Base\Facades\Facade;
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -10,7 +12,40 @@
 |
 */
 $real_path = realpath(__DIR__.'/../');
-$app = new Chicane\Application(); 
+
+$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
+$app = new Chicane\Application($request); 
+
+/*
+|--------------------------------------------------------------------------
+| Detect The Application Environment
+|--------------------------------------------------------------------------
+|
+| Laravel takes a dead simple approach to your application environments
+| so you can just specify a machine name for the host that matches a
+| given environment, then we will automatically detect it for you.
+|
+*/
+
+$env = $app->detectEnvironment(array(
+
+	'local' => array('local'),
+
+));
+
+/*
+|--------------------------------------------------------------------------
+| Bind Paths
+|--------------------------------------------------------------------------
+|
+| Here we are binding the paths configured in paths.php to the app. You
+| should not be changing these here. If you need to change these you
+| may do so within the paths.php file and they will be bound here.
+|
+*/
+
+$app->bindInstallPaths(require __DIR__.'/../bootstrap/paths.php');
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +53,7 @@ $app = new Chicane\Application();
 |--------------------------------------------------------------------------
 |
 */
-
-$app->register('Error', function() {
-    $error_notificator = new \Whoops\Run;
-    $error_notificator->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-    $error_notificator->register();
-    return $error_notificator;
-});
-
+$app->startExceptionHandling();
 /*
 |--------------------------------------------------------------------------
 | Application error handler beautifier for dev env
@@ -33,7 +61,7 @@ $app->register('Error', function() {
 |
 */
 
-$app->register('orm', function() {
+/* $app->instance('doctrine', function() {
 
     $paths = array(__DIR__.'/../app/entities');
     $isDevMode = false;
@@ -49,7 +77,7 @@ $app->register('orm', function() {
     $config = Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
     $entityManager = Doctrine\ORM\EntityManager::create($dbParams, $config);
     return $entityManager;
-});
+}); */
 
 /*
 |--------------------------------------------------------------------------
@@ -58,7 +86,7 @@ $app->register('orm', function() {
 |
 |
 */
-$app->register('view', function() { 
+/*  $app->instance('view', function() { 
     $view_cache = new Twig_Loader_Filesystem(__DIR__.'/../app/views');
     $view_engine = new Twig_Environment($view_cache);
     $view_engine_options = [
@@ -66,8 +94,11 @@ $app->register('view', function() {
     ];
     return $view_engine;
 });
+  */
 
+Facade::clearResolvedInstances();
 
+Facade::setFacadeApplication($app);
 /*
 |--------------------------------------------------------------------------
 | Include Route collection
@@ -114,7 +145,7 @@ require_once __DIR__."/../app/http/routes.php";
 |
 */
 
-$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
 $response = $app->handle($request);
 $response->send();
 return $app;
